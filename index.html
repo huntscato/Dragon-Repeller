@@ -1,65 +1,67 @@
 <!doctype html>
 <html class="no-js" lang="">
 
-<head>
-  <meta charset="utf-8">
-  <title>RPG - Dragon Repeller</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <title>RPG - Dragon Repeller</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap">
 
-  <meta name="theme-color" content="#fafafa">
-</head>
+    <meta name="theme-color" content="#fafafa">
+  </head>
 
-<body>
+  <body>
 
-  <!-- Add your site or application content here -->
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+    <!-- Add your site or application content here -->
 
-  <div id="game">
-    
-    <div id="stats">
-      <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
-      <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
-      <span class="span">Gold: <strong><span id="goldText">50</span></strong></span>
+    <div id="game">
+      
+      <div id="stats">
+        <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+        <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+        <span class="span">Gold: <strong><span id="goldText">50</span></strong></span>
+      </div>
+      
+      <div id="controls">
+        <button id="button1">Go to store</button>
+        <button id="button2">Go to cave</button>
+        <button id="button3">Fight dragon</button>
+      </div>
+
+      <div id="monsterStats">
+        <span class="stat">Monster Name: <strong><span></span></strong></span>
+        <span class="stat">Health: <strong><span></span></strong></span>
+      </div>
+
+      <div id="text">
+        <p>Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. 
+          Where do you want to go? Use the buttons above.</p>
+      </div>
+
     </div>
-    
-    <div id="controls">
-      <button id="button1">Go to store</button>
-      <button id="button2">Go to cave</button>
-      <button id="button3">Fight dragon</button>
-    </div>
 
-    <div id="monsterStats">
-      <span class="stat">Monster Name: <strong><span></span></strong></span>
-      <span class="stat">Health: <strong><span></span></strong></span>
-    </div>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 
-    <div id="text">
-      <p>Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. 
-        Where do you want to go? Use the buttons above.</p>
-    </div>
-
-  </div>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </html>
