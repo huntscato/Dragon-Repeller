@@ -33,6 +33,23 @@ const weapons = [
         power: 100,
     }
 ];
+const monsters = [
+    {
+      name: "slime",
+      level: 2,
+      health: 15
+    },
+    {
+      name: "fanged beast",
+      level: 8,
+      health: 60
+    },
+    {
+      name: "dragon",
+      level: 20,
+      health: 300
+    }
+  ];
 const locations = [
     {
         name: "town square",
@@ -51,6 +68,12 @@ const locations = [
         "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
         "button functions": [fightSlime, fightBeast, goTown],
         text: "You enter the cave. You see some monsters."
+    },
+    {
+        name: "fight",
+        "button text": ["Attack", "Dodge", "Run"],
+        "button functions": [attack, dodge, goTown],
+        text: "You are fighting a monster."
     }
 ];
 
@@ -76,13 +99,16 @@ function goCave() {
     update(locations[2]);
 }
 
-
-function fightDragon() {
-    console.log("Fighting dragon.");
+function goFight() {
+    update(locations[3]);
+    monsterHealth = monsters[fighting].health;
+    monsterStats.style.display = "block";
+    monsterName.innerText = monsters[fighting].name;
+    monsterHealthText.innerText = monsters[fighting].health;
 }
 
 function buyHealth() {
-
+    
     if (gold >= 10) {
         gold -= 10;
         health += 10;
@@ -126,10 +152,28 @@ function sellWeapon() {
 }
 
 function fightSlime() {
-
+    fighting = 0;
+    goFight();
 }
 
 function fightBeast() {
+    fighting = 1;
+    goFight();
+}
+
+function fightDragon() {
+    fighting = 2;
+    goFight();
+}
+
+function attack() {
+    text.innerText = "The " + monsters[fighting].name + " attacks.";
+    text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
+    health = health -= monsters[fighting].level;
+    monsterHealth = monsterHealth -= weapons[currentWeapon].power;
+}
+
+function dodge() {
 
 }
 
